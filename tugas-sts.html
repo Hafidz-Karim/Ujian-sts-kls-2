@@ -41,6 +41,48 @@
             }
         }
         validateAddres('Kota Salatiga');
+        document.write("<br>");
+
+        // Tugas 3
+        function validatePhoneNumber(phoneNumber) {
+
+            if (phoneNumber === "") {
+                document.write("Nomor telepon tidak boleh kosong");
+                return;
+            }
+            phoneNumber = phoneNumber.toString();
+
+            if (!isNaN(phoneNumber)) {
+                if (phoneNumber.length >= 10 && phoneNumber.length <= 13) {
+                    document.write("Nomor telepon valid");
+                } else {
+                    document.write("Nomor telepon harus terdiri dari 10-13 angka");
+                }
+            } else {
+                document.write("Nomor telepon hanya boleh berisi angka");
+            }
+        }
+
+        validatePhoneNumber("9191639637");
+        document.write("<br>");
+
+        // Tugas 4
+        function validateEmail(email) {
+            if (email === "") {
+                return "Email tidak boleh kosong";
+            }
+
+            if (!email.includes("@")) {
+                return "Email harus mengandung karakter '@'";
+            }
+            if (email.length < 5) {
+                return "Email terlalu pendek";
+            }
+            return "Email valid";
+        }
+        const email = "Hafidzkarim17@gmail.com";
+        document.write(validateEmail(email));
+
     </script>
 </body>
 
